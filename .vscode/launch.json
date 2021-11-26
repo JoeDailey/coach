@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "name": "debug",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/index.ts",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}/bin/**/*.js"],
+      "env": {
+        "DISCORD_TOKEN": "OTEzMTc4NTQzMzY0NjY5NDgx.YZ6tyg.CW6LpijfXxuSTNuI_3hZwjZF3qU",
+      }
+    },
+    {
+      "type": "node",
+      "name": "test",
+      "request": "launch",
+      "runtimeArgs": ["--inspect-brk", "${workspaceRoot}/node_modules/.bin/jest", "--runInBand", "--coverage", "false"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+  ]
+}

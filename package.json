@@ -1,0 +1,35 @@
+{
+  "name": "discord-slash",
+  "version": "1.0.0",
+  "description": "Slash Command helpers",
+  "author": "Joe Dailey <josephldailey@gmail.com>",
+  "license": "MIT",
+  "main": "bin/index.js",
+  "files": [
+    "bin/**/*"
+  ],
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon --watch index.ts --exec ts-node src/index.ts",
+    "build": "rm -rf bin; tsc --build tsconfig.json",
+    "rebuild": "tsc --build tsconfig.json",
+    "test": "jest",
+    "clean": "rm bin -r"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@types/node": "^16.11.10",
+    "discord-api-types": "^0.24.0",
+    "discord-slash": "ssh://git@github.com:JoeDailey/discord-slash.git",
+    "discord.js": "^13.3.1",
+    "lobby-bot-3": "ssh://git@github.com:JoeDailey/lobby-bot-3.git",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/ioredis": "^4.28.1",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "tsc": "^2.0.3"
+  }
+}
